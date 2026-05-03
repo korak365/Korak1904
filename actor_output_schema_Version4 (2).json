@@ -1,0 +1,31 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the arXiv Paper-to-JSON Scraper",
+    "properties": {
+        "papersOverview": {
+            "type": "string",
+            "title": "Extracted Papers",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=papers"
+        },
+        "equationsExtracted": {
+            "type": "string",
+            "title": "Equations Database",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=equations"
+        },
+        "tablesExtracted": {
+            "type": "string",
+            "title": "Tables Database",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=tables"
+        },
+        "structuredDataExport": {
+            "type": "string",
+            "title": "Complete Structured Export",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=PAPERS_JSON_EXPORT"
+        },
+        "extractionReport": {
+            "type": "string",
+            "title": "Extraction Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=EXTRACTION_REPORT"
+        }
+    }
+}

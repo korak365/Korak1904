@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "arxiv-paper-to-json-scraper",
+    "title": "arXiv Paper-to-JSON Scraper",
+    "description": "Extracts equations, tables, and text from new AI research papers.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "Claude (Anthropic)"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,107 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "papers": {
+            "title": "Papers Overview",
+            "transformation": {
+                "fields": ["arxivId", "title", "authors", "publishedDate", "category", "equationsCount", "tablesCount"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "arxivId": {
+                        "label": "arXiv ID",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Paper Title",
+                        "format": "text"
+                    },
+                    "authors": {
+                        "label": "Authors",
+                        "format": "text"
+                    },
+                    "publishedDate": {
+                        "label": "Published Date",
+                        "format": "date"
+                    },
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "equationsCount": {
+                        "label": "Equations",
+                        "format": "number"
+                    },
+                    "tablesCount": {
+                        "label": "Tables",
+                        "format": "number"
+                    }
+                }
+            }
+        },
+        "equations": {
+            "title": "Extracted Equations",
+            "transformation": {
+                "fields": ["arxivId", "paperTitle", "equationId", "latex", "context"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "arxivId": {
+                        "label": "Paper ID",
+                        "format": "text"
+                    },
+                    "paperTitle": {
+                        "label": "Paper",
+                        "format": "text"
+                    },
+                    "equationId": {
+                        "label": "Equation ID",
+                        "format": "text"
+                    },
+                    "latex": {
+                        "label": "LaTeX",
+                        "format": "text"
+                    },
+                    "context": {
+                        "label": "Context",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "tables": {
+            "title": "Extracted Tables",
+            "transformation": {
+                "fields": ["arxivId", "paperTitle", "tableId", "caption", "rowCount"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "arxivId": {
+                        "label": "Paper ID",
+                        "format": "text"
+                    },
+                    "paperTitle": {
+                        "label": "Paper",
+                        "format": "text"
+                    },
+                    "tableId": {
+                        "label": "Table ID",
+                        "format": "text"
+                    },
+                    "caption": {
+                        "label": "Caption",
+                        "format": "text"
+                    },
+                    "rowCount": {
+                        "label": "Rows",
+                        "format": "number"
+                    }
+                }
+            }
+        }
+    }
+}

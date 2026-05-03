@@ -1,0 +1,73 @@
+{
+    "title": "Input schema of the arXiv Paper-to-JSON Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "arXiv URLs to scrape (e.g., recent papers, categories).",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://arxiv.org/list/cs.AI/recent"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Papers to Scrape",
+            "type": "integer",
+            "description": "Maximum number of papers to extract.",
+            "default": 50
+        },
+        "categories": {
+            "title": "Paper Categories",
+            "type": "array",
+            "description": "arXiv categories to scrape (cs.AI, cs.LG, cs.NLP, etc.)",
+            "editor": "json",
+            "default": ["cs.AI", "cs.LG", "cs.NLP"]
+        },
+        "extractEquations": {
+            "title": "Extract Equations",
+            "type": "boolean",
+            "description": "Whether to extract LaTeX equations from papers.",
+            "default": true
+        },
+        "extractTables": {
+            "title": "Extract Tables",
+            "type": "boolean",
+            "description": "Whether to extract tables and their data.",
+            "default": true
+        },
+        "extractAbstract": {
+            "title": "Extract Abstract",
+            "type": "boolean",
+            "description": "Whether to extract paper abstracts.",
+            "default": true
+        },
+        "extractMetadata": {
+            "title": "Extract Metadata",
+            "type": "boolean",
+            "description": "Extract authors, dates, arxiv IDs, categories.",
+            "default": true
+        },
+        "downloadPDF": {
+            "title": "Download PDF Text",
+            "type": "boolean",
+            "description": "Extract full text from PDF (slower but more complete).",
+            "default": false
+        },
+        "extractFiguresCaptions": {
+            "title": "Extract Figure Captions",
+            "type": "boolean",
+            "description": "Extract figure descriptions and captions.",
+            "default": true
+        },
+        "structuredOutput": {
+            "title": "Structured JSON Output",
+            "type": "boolean",
+            "description": "Format output as structured JSON for ML/NLP pipelines.",
+            "default": true
+        }
+    }
+}
